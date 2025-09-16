@@ -1,10 +1,14 @@
+import Header from '@/components/layout/Header'
 import React from 'react'
+import Index from '../posts'
 
-const Index = () => {
+const Users = () => {
   return (
-    <div>Users</div>
+    <div>
+      <Header />
+      <div>Users Index Page</div>
+    </div>
   )
 }
 
-
-export default Index
+export default Users

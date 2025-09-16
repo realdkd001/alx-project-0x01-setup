@@ -1,8 +1,13 @@
+import Header from '@/components/layout/Header'
+
 import React from 'react'
 
 const Index = () => {
   return (
-    <div>Posts</div>
+    <div>
+      <Header />
+      <div>Posts Index Page</div>
+    </div>
   )
 }
 
