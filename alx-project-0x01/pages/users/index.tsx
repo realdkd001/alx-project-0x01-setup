@@ -3,12 +3,12 @@ import React from 'react'
 import UserCard from '@/components/common/UserCard'
 import { UserProps } from '@/interfaces'
 
-const Users: React.FC<{ users: UserProps[] }> = ({ users }) => {
+const Users: React.FC<{ posts: UserProps[] }> = ({ posts }) => {
   return (
     <div>
       <Header />
       <div>
-        {users.map(user => (
+        {posts.map(user => (
           <UserCard key={user.id} {...user} />
         ))}
       </div>
@@ -19,13 +19,13 @@ const Users: React.FC<{ users: UserProps[] }> = ({ users }) => {
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users")
-  const users = await response.json()
+  const posts = await response.json()
 
   return {
     props: {
-      users
+      posts,
     }
   }
 }
 
-export default Users
+export default Users;
